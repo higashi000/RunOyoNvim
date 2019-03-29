@@ -27,7 +27,7 @@ require 'twitter'
   config.access_token_secret = VIM.evaluate('g:access_token_secret')
 end
 
-@client.home_timeline.reverse_each do |tweet|
+@client.home_timeline.each do |tweet|
   print tweet.user.name + "\n"
   print tweet.user.screen_name + "\n"
   print tweet.text + "\n"
