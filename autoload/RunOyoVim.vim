@@ -11,6 +11,8 @@ ruby << RUBY
     config.access_token = VIM.evaluate('g:access_token')
     config.access_token_secret = VIM.evaluate('g:access_token_secret')
   end
+
+  @client.update(VIM.evaluate('a:tweetText'))
 RUBY
 endfunction
 
