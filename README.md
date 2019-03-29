@@ -30,3 +30,8 @@ let g:access_token_secret = "Your Access token secret"
 ```
 :RunOyoTL
 ```
+
+- ワード検索
+```
+:RunOyoSearch `検索ワード`
+```
