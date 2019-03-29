@@ -48,7 +48,7 @@ require 'twitter'
   config.access_token_secret = VIM.evaluate('g:access_token_secret')
 end
 
-@client.search(VIM.evaluate('a:keyWord'), :count => 50).map do |tweet|
+@client.search(VIM.evaluate('a:keyWord'), :count => 25).map do |tweet|
   print tweet.user.name + "\n"
   print tweet.user.screen_name + "\n"
   print tweet.text + "\n"
