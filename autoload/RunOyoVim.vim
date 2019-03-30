@@ -2,6 +2,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! RunOyoVim#Tweet(tweetText)
+let g:ending = get(g:, 'ending', '')
 ruby << RUBY
   require 'twitter'
 
@@ -12,7 +13,7 @@ ruby << RUBY
     config.access_token_secret = VIM.evaluate('g:access_token_secret')
   end
 
-  @client.update(VIM.evaluate('a:tweetText'))
+  @client.update(VIM.evaluate('a:tweetText') + VIM.evaluate('g:ending'))
 RUBY
 endfunction
 
