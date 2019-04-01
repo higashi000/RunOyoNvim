@@ -26,6 +26,11 @@ let g:access_token_secret = "Your Access token secret"
 :RunOyoTweet `ツイート内容`
 ```
 
+- メンション
+```
+:RunOyoTweet `ユーザーID` `リプライの内容`
+```
+
 - ツイートに語尾を追加
 `init.vim`に以下を記述してください
 ```
