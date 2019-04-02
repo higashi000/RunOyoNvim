@@ -9,6 +9,7 @@ repo = 'higashi000/RunOyoVim'
 
 ## Initial setting
 - 下記の設定を`init.vim`に記述するか書いたファイルをinit.vimで読み込んでください
+  - `Your Consumer key`, `Your Consumer key secret`, `Your Access token`, `Your Access token secret`は自分のアカウントの物に書き換えてください
 ```vimscript
 let g:consumer_key = "Your Consumer key"
 let g:consumer_secret = "Your Consumer key secret"
