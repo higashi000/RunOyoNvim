@@ -1,7 +1,7 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! RunOyoVim#Tweet(...)
+function! RunOyoNvim#Tweet(...)
 let l:tweetText = ""
 
 if a:0 == 1
@@ -27,7 +27,7 @@ ruby << RUBY
 RUBY
 endfunction
 
-function! RunOyoVim#GetTL()
+function! RunOyoNvim#GetTL()
 ruby << RUBY
 require 'twitter'
 
@@ -48,7 +48,7 @@ RUBY
 redir END
 endfunction
 
-function! RunOyoVim#WordSearch(keyWord)
+function! RunOyoNvim#WordSearch(keyWord)
 ruby << RUBY
 require 'twitter'
 
@@ -68,20 +68,20 @@ end
 RUBY
 endfunction
 
-function! RunOyoVim#SeeTL()
+function! RunOyoNvim#SeeTL()
   e ~/.TL.txt
   let outputfile = "$HOME/.TL.txt"
   execute ":redir!>".outputfile
-    silent! call RunOyoVim#GetTL()
+    silent! call RunOyoNvim#GetTL()
   redir END
   checktime
 endfunction
 
-function! RunOyoVim#Search(keyWord)
+function! RunOyoNvim#Search(keyWord)
   e ~/.Search.txt
   let outputfile = "$HOME/.Search.txt"
   execute ":redir!>" . outputfile
-    silent! call RunOyoVim#WordSearch(a:keyWord)
+    silent! call RunOyoNvim#WordSearch(a:keyWord)
   redir END
   checktime
 endfunction
