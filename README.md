@@ -1,10 +1,15 @@
-# RunOyoVim
+# RunOyoNvim
+
+## introduction
+Neovim用のTwitterクライアント RunOyoNvim
+使用にはTwitterAPIの取得が必要です
+
 
 ## install
 - dein
 ```
 [[plugins]]
-repo = 'higashi000/RunOyoVim'
+repo = 'higashi000/RunOyoNvim'
 ```
 
 ## Initial setting
